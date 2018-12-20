@@ -17,7 +17,7 @@ var sockets = io.listen(server)
 sockets.on('connection', function(socket) {
     console.log('nuevo socket conectado');
     socket.on('mensaje-del-cliente', (data) => {
-        // console.log(data);
+        //console.log(data);
         sockets.emit('mensaje-del-servidor', data)
     })
 })
